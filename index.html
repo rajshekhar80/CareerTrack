@@ -1,0 +1,223 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareerTrack | Placement Management</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="app">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <h2 class="logo">Career<span>Track.</span></h2>
+
+        <p class="menu-title">WORKSPACE</p>
+
+        <a href="#" class="nav-link active">▦ <span>Dashboard</span></a>
+        <a href="#applications" class="nav-link">▤ <span>Applications</span></a>
+        <a href="#add-application" class="nav-link">＋ <span>Add Internship</span></a>
+        <a href="#profile" class="nav-link">♙ <span>My Profile</span></a>
+
+        <div class="sidebar-bottom">
+            <div class="career-icon">✦</div>
+            <p>YOUR CAREER PARTNER</p>
+            <h3>Build your future.</h3>
+            <small>Every application is a new opportunity.</small>
+        </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <!-- TOPBAR -->
+        <header class="topbar">
+            <div>
+                <p class="welcome">OVERVIEW / STUDENT PORTAL</p>
+                <h1>Dashboard <span class="wave">👋</span></h1>
+                <p class="top-subtitle">Welcome back! Here's your career progress.</p>
+            </div>
+
+            <div class="user" id="profile">
+                <div class="avatar">R</div>
+                <div>
+                    <strong>Raj</strong>
+                    <small>Student Account</small>
+                </div>
+                <span class="online-dot"></span>
+            </div>
+        </header>
+
+        <!-- HERO -->
+        <section class="hero">
+            <div class="hero-content">
+                <span class="hero-label">✦ YOUR CAREER STARTS HERE</span>
+                <h2>Turn your ambitions<br>into achievements.</h2>
+                <p>Track internships, manage applications and stay ready for your next opportunity.</p>
+                <a href="#add-application" class="hero-btn">+ Add New Application</a>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-circle">🚀</div>
+                <div class="hero-orbit orbit-one"></div>
+                <div class="hero-orbit orbit-two"></div>
+            </div>
+            <div class="hero-decoration"></div>
+        </section>
+
+        <!-- STATISTICS -->
+        <section class="stats-section">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">YOUR PERFORMANCE</p>
+                    <h2>Application Overview</h2>
+                </div>
+                <span class="period-tag">● LIVE DATA</span>
+            </div>
+
+            <div class="stats">
+                <div class="stat-card stat-total">
+                    <div class="stat-top">
+                        <span>Total Applications</span>
+                        <div class="stat-icon">▤</div>
+                    </div>
+                    <h2 id="totalCount">0</h2>
+                    <small>All submitted applications</small>
+                </div>
+
+                <div class="stat-card stat-shortlisted">
+                    <div class="stat-top">
+                        <span>Shortlisted</span>
+                        <div class="stat-icon">✦</div>
+                    </div>
+                    <h2 id="shortlistedCount">0</h2>
+                    <small>Positive responses</small>
+                </div>
+
+                <div class="stat-card stat-interview">
+                    <div class="stat-top">
+                        <span>Interviews</span>
+                        <div class="stat-icon">♧</div>
+                    </div>
+                    <h2 id="interviewCount">0</h2>
+                    <small>Interview opportunities</small>
+                </div>
+
+                <div class="stat-card stat-selected">
+                    <div class="stat-top">
+                        <span>Selected</span>
+                        <div class="stat-icon">✓</div>
+                    </div>
+                    <h2 id="selectedCount">0</h2>
+                    <small>Offers received</small>
+                </div>
+            </div>
+        </section>
+
+        <!-- ADD APPLICATION -->
+        <section class="panel add-panel" id="add-application">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">NEW OPPORTUNITY</p>
+                    <h2>Add Internship</h2>
+                    <p class="panel-description">Enter the details of your new application below.</p>
+                </div>
+                <div class="panel-icon">＋</div>
+            </div>
+
+            <form id="applicationForm">
+                <div class="form-grid">
+
+                    <div class="field">
+                        <label for="company">Company Name</label>
+                        <input type="text" id="company"
+                               placeholder="e.g. Google" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="role">Job Role</label>
+                        <input type="text" id="role"
+                               placeholder="e.g. Java Developer" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="status">Application Status</label>
+                        <select id="status">
+                            <option value="Applied">Applied</option>
+                            <option value="Shortlisted">Shortlisted</option>
+                            <option value="Interview">Interview</option>
+                            <option value="Selected">Selected</option>
+                            <option value="Rejected">Rejected</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label for="stipend">Stipend / Salary</label>
+                        <input type="text" id="stipend"
+                               placeholder="e.g. ₹15,000/month">
+                    </div>
+
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="primary-btn">
+                        + Add Application
+                    </button>
+                    <span class="form-note">✦ Keep your career journey updated</span>
+                </div>
+            </form>
+        </section>
+
+        <!-- APPLICATION TABLE -->
+        <section class="panel applications-panel" id="applications">
+
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">YOUR JOB JOURNEY</p>
+                    <h2>Recent Applications</h2>
+                    <p class="panel-description">Manage and monitor your internship progress.</p>
+                </div>
+                <span class="live-tag">● LIVE TRACKER</span>
+            </div>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>COMPANY</th>
+                            <th>JOB ROLE</th>
+                            <th>STIPEND</th>
+                            <th>STATUS</th>
+                            <th>ACTION</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="applicationList">
+                        <tr>
+                            <td colspan="5" class="empty">
+                                No applications yet. Add your first internship!
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer>
+            <div class="footer-brand">Career<span>Track.</span></div>
+            <p>Designed to help students build successful careers.</p>
+            <small>© 2026 CareerTrack. All rights reserved.</small>
+        </footer>
+
+    </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
